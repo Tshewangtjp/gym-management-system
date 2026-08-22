@@ -135,4 +135,4 @@ Future sprints will implement:
 * Dashboard and reports
 =======
 # gym-management-system
-MERN Stack Gym Management System
+MERN Stack Gym Management SystemS
