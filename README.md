@@ -136,3 +136,107 @@ Future sprints will implement:
 =======
 # gym-management-system
 MERN Stack Gym Management SystemS
+# Gym Management System – Sprint 4 Setup
+
+## Project Structure
+
+The project uses a separate React frontend and Node.js/Express backend.
+
+```text
+Gym-Management-System/
+├── client/
+├── server/
+└── docs/
+```
+
+## Requirements
+
+* Node.js
+* npm
+* Git
+* GitHub
+* MongoDB Community Server or MongoDB Atlas
+* Visual Studio Code
+* Google Chrome or Microsoft Edge
+
+## Frontend Setup
+
+Open a terminal:
+
+```bash
+cd client
+npm install
+```
+
+Start the React development server:
+
+```bash
+npm run dev
+```
+
+Frontend:
+
+```text
+http://localhost:5173
+```
+
+## Backend Setup
+
+Open another terminal:
+
+```bash
+cd server
+npm install
+```
+
+Start the development server:
+
+```bash
+npm run dev
+```
+
+Backend:
+
+```text
+http://localhost:5000
+```
+
+Health check:
+
+```text
+http://localhost:5000/api/health
+```
+
+## Frontend Dependencies
+
+* React
+* React Router DOM
+* Axios
+* Vite
+
+## Backend Dependencies
+
+* Express
+* CORS
+* Dotenv
+* Nodemon
+
+## Current Sprint
+
+**Sprint 4 – Project Scaffolding & Development Environment Initialization**
+
+At the completion of Sprint 4, the project contains a working React frontend, a working Express backend, organized project folders, required development dependencies, and separate frontend/backend development servers.
+
+## Next Development Phase
+
+Future sprints will implement the Gym Management System requirements defined during Sprint 2 and designed during Sprint 3, including:
+
+* Authentication
+* Member Management
+* Trainer Management
+* Membership Plans
+* Attendance
+* Payments
+* Dashboard
+* Reports
+* MongoDB integration
