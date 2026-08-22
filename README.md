@@ -240,3 +240,23 @@ Future sprints will implement the Gym Management System requirements defined dur
 * Dashboard
 * Reports
 * MongoDB integration
+## Sprint 5 – React Frontend Foundation
+
+Sprint 5 establishes the React frontend foundation of the Gym Management System.
+
+### Frontend Structure
+
+```text
+client/
+├── public/
+└── src/
+    ├── assets/
+    ├── components/
+    ├── hooks/
+    ├── layouts/
+    ├── pages/
+    ├── routes/
+    ├── services/
+    ├── utils/
+    ├── App.jsx
+    └── main.jsx
