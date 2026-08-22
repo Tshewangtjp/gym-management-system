@@ -1,3 +1,5 @@
+import { Outlet } from "react-router-dom";
+
 import Navbar from "../components/layout/Navbar";
 import Footer from "../components/layout/Footer";
 
@@ -9,11 +11,9 @@ function MainLayout() {
 
             <main className="main-content">
                 <section className="content-container">
-                    <h1>Gym Management System</h1>
 
-                    <p>
-                        Main application content will appear here.
-                    </p>
+                    <Outlet />
+
                 </section>
             </main>
 

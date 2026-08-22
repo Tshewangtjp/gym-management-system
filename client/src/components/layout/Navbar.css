@@ -1,0 +1,487 @@
+/* =====================================================
+   NAVBAR
+===================================================== */
+
+.navbar {
+    position: sticky;
+
+    top: 0;
+
+    z-index: 1000;
+
+    width: 100%;
+
+    background: rgba(5, 5, 5, 0.88);
+
+    backdrop-filter: blur(18px);
+
+    -webkit-backdrop-filter: blur(18px);
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+
+/* =====================================================
+   NAVBAR CONTAINER
+===================================================== */
+
+.navbar-container {
+    width: 100%;
+
+    max-width: 1500px;
+
+    height: 72px;
+
+    margin: auto;
+
+    padding: 0 6%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+}
+
+
+/* =====================================================
+   BRAND
+===================================================== */
+
+.navbar-brand {
+    display: flex;
+
+    align-items: center;
+
+    gap: 11px;
+
+    text-decoration: none;
+
+    color: white;
+}
+
+
+.brand-icon {
+    width: 40px;
+    height: 40px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 10px;
+
+    background: #ff5a00;
+
+    color: white;
+
+    font-size: 20px;
+
+    font-weight: 900;
+
+    box-shadow:
+        0 6px 20px rgba(255, 90, 0, 0.25);
+}
+
+
+.brand-text strong {
+    display: block;
+
+    font-size: 17px;
+
+    line-height: 1;
+
+    letter-spacing: 0.8px;
+}
+
+
+.brand-text strong span {
+    color: #ff5a00;
+}
+
+
+.brand-text small {
+    display: block;
+
+    margin-top: 4px;
+
+    color: #666;
+
+    font-size: 8px;
+
+    letter-spacing: 0.5px;
+}
+
+
+/* =====================================================
+   NAVIGATION
+===================================================== */
+
+.navbar-links {
+    display: flex;
+
+    align-items: center;
+
+    gap: 5px;
+
+    margin-left: auto;
+
+    margin-right: 35px;
+}
+
+
+.nav-link {
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 7px;
+
+    height: 42px;
+
+    padding: 0 15px;
+
+    border-radius: 9px;
+
+    color: #858585;
+
+    text-decoration: none;
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+    transition:
+        color 0.25s ease,
+        background 0.25s ease;
+}
+
+
+.nav-link:hover {
+    color: #ffffff;
+
+    background: rgba(255, 255, 255, 0.05);
+}
+
+
+.nav-link.active {
+    color: #ffffff;
+
+    background: rgba(255, 90, 0, 0.09);
+}
+
+
+.nav-link.active::after {
+    content: "";
+
+    position: absolute;
+
+    bottom: -1px;
+
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    width: 18px;
+
+    height: 2px;
+
+    border-radius: 10px;
+
+    background: #ff5a00;
+
+    box-shadow:
+        0 0 10px rgba(255, 90, 0, 0.6);
+}
+
+
+.nav-icon {
+    color: #666;
+
+    font-size: 15px;
+
+    transition: color 0.25s ease;
+}
+
+
+.nav-link:hover .nav-icon,
+.nav-link.active .nav-icon {
+    color: #ff5a00;
+}
+
+
+/* =====================================================
+   LOGIN
+===================================================== */
+
+.navbar-actions {
+    display: flex;
+
+    align-items: center;
+}
+
+
+.login-button {
+    height: 40px;
+
+    padding: 0 17px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    border: 1px solid rgba(255, 90, 0, 0.5);
+
+    border-radius: 9px;
+
+    background: #ff5a00;
+
+    color: white;
+
+    text-decoration: none;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    transition: all 0.25s ease;
+}
+
+
+.login-button span {
+    font-size: 16px;
+
+    transition: transform 0.25s ease;
+}
+
+
+.login-button:hover {
+    background: #ff6a1a;
+
+    border-color: #ff6a1a;
+
+    transform: translateY(-1px);
+
+    box-shadow:
+        0 8px 20px rgba(255, 90, 0, 0.25);
+}
+
+
+.login-button:hover span {
+    transform: translateX(3px);
+}
+
+
+/* =====================================================
+   MOBILE MENU BUTTON
+===================================================== */
+
+.menu-toggle {
+    display: none;
+
+    width: 42px;
+    height: 42px;
+
+    padding: 9px;
+
+    border: 1px solid #292929;
+
+    border-radius: 9px;
+
+    background: #111;
+
+    cursor: pointer;
+}
+
+
+.menu-toggle span {
+    display: block;
+
+    width: 20px;
+    height: 2px;
+
+    margin: 4px auto;
+
+    background: #ffffff;
+
+    border-radius: 10px;
+
+    transition: all 0.25s ease;
+}
+
+
+.menu-toggle.open span:nth-child(1) {
+    transform:
+        translateY(6px)
+        rotate(45deg);
+}
+
+
+.menu-toggle.open span:nth-child(2) {
+    opacity: 0;
+}
+
+
+.menu-toggle.open span:nth-child(3) {
+    transform:
+        translateY(-6px)
+        rotate(-45deg);
+}
+
+
+/* =====================================================
+   MOBILE MENU
+===================================================== */
+
+.mobile-menu {
+    display: none;
+
+    padding: 10px 20px 20px;
+
+    background: rgba(5, 5, 5, 0.98);
+
+    border-top: 1px solid #181818;
+}
+
+
+.mobile-link {
+    display: flex;
+
+    align-items: center;
+
+    gap: 14px;
+
+    padding: 14px;
+
+    margin-top: 4px;
+
+    border-radius: 9px;
+
+    color: #888;
+
+    text-decoration: none;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    transition: all 0.2s ease;
+}
+
+
+.mobile-link span {
+    width: 25px;
+
+    color: #666;
+
+    font-size: 16px;
+
+    text-align: center;
+}
+
+
+.mobile-link:hover,
+.mobile-link.active {
+    color: #ffffff;
+
+    background: rgba(255, 90, 0, 0.09);
+}
+
+
+.mobile-link.active span {
+    color: #ff5a00;
+}
+
+
+.mobile-login {
+    display: block;
+
+    margin-top: 12px;
+
+    padding: 13px;
+
+    border-radius: 9px;
+
+    background: #ff5a00;
+
+    color: white;
+
+    text-align: center;
+
+    text-decoration: none;
+
+    font-size: 13px;
+
+    font-weight: 700;
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 800px) {
+
+    .navbar-container {
+        padding: 0 20px;
+    }
+
+
+    .navbar-links {
+        display: none;
+    }
+
+
+    .navbar-actions {
+        display: none;
+    }
+
+
+    .menu-toggle {
+        display: block;
+    }
+
+
+    .mobile-menu.show {
+        display: block;
+    }
+
+}
+
+
+/* =====================================================
+   SMALL MOBILE
+===================================================== */
+
+@media (max-width: 450px) {
+
+    .navbar-container {
+        height: 65px;
+
+        padding: 0 15px;
+    }
+
+
+    .brand-text small {
+        display: none;
+    }
+
+
+    .brand-text strong {
+        font-size: 15px;
+    }
+
+
+    .brand-icon {
+        width: 36px;
+        height: 36px;
+
+        font-size: 18px;
+    }
+
+}

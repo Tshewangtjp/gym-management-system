@@ -260,3 +260,82 @@ client/
     ├── utils/
     ├── App.jsx
     └── main.jsx
+
+
+    # Sprint 6 – Client-Side Navigation
+
+Sprint 6 implements client-side navigation using React Router.
+
+## Routing Technology
+
+* React
+* React Router DOM
+* BrowserRouter
+* Routes
+* Route
+* Link
+* NavLink
+* Outlet
+
+## Available Routes
+
+| Route        | Page      |
+| ------------ | --------- |
+| `/`          | Home      |
+| `/dashboard` | Dashboard |
+| `/profile`   | Profile   |
+| `/login`     | Login     |
+| `*`          | Not Found |
+
+## Route Structure
+
+The application's routes are centralized inside:
+
+```text id="3c7e86"
+client/src/routes/AppRoutes.jsx
+```
+
+## Main Layout
+
+Pages under the main application layout are displayed through:
+
+```jsx id="beznk4"
+<Outlet />
+```
+
+The main layout contains:
+
+* Navbar
+* Active page
+* Footer
+
+## Navigation
+
+The Navbar uses React Router `NavLink` components for:
+
+* Home
+* Dashboard
+* Profile
+* Login
+
+## 404 Handling
+
+Undefined URLs display the custom `NotFound` page.
+
+## Running the Frontend
+
+```bash id="m3al42"
+cd client
+npm install
+npm run dev
+```
+
+Frontend URL:
+
+```text id="f8zu8p"
+http://localhost:5173
+```
+
+## Sprint 6 Status
+
+The React frontend has been converted from a collection of static pages into a navigable single-page application with centralized routing, reusable layouts, navigation links, and custom 404 handling.
