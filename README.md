@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Gym Management System
 
 ## Project Title
@@ -133,3 +134,7 @@ Future sprints will implement:
 * Attendance management
 * Payment management
 * Dashboard and reports
+=======
+# gym-management-system
+MERN Stack Gym Management System
+>>>>>>> 08b516fbcfae16049fb9c4432e7538f39a63e6c9
