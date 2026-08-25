@@ -1,0 +1,52 @@
+.ui-card {
+    width: 100%;
+
+    padding: 24px;
+
+    background: #101010;
+
+    border: 1px solid #1e1e1e;
+
+    border-radius: 16px;
+
+    transition: all 0.25s ease;
+}
+
+.ui-card:hover {
+    border-color: #2c2c2c;
+
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 15px 40px rgba(0, 0, 0, 0.25);
+}
+
+
+.ui-card-header {
+    margin-bottom: 20px;
+}
+
+
+.ui-card-header h3 {
+    margin: 0;
+
+    color: #ffffff;
+
+    font-size: 17px;
+}
+
+
+.ui-card-header p {
+    margin: 7px 0 0;
+
+    color: #777777;
+
+    font-size: 12px;
+
+    line-height: 1.6;
+}
+
+
+.ui-card-content {
+    width: 100%;
+}

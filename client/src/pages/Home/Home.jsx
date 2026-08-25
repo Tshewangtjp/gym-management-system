@@ -1,325 +1,126 @@
+import Button from "../../components/ui/Button";
+import Card from "../../components/ui/Card";
+
 import "./Home.css";
 
 function Home() {
-  return (
-    <div className="home">
 
-      {/* ================= HERO ================= */}
-      <section className="hero">
+    const handleGetStarted = () => {
+        console.log("Get Started");
+    };
 
-        <div className="hero-content">
+    return (
+        <div className="home">
 
-          <div className="hero-badge">
-            <span className="badge-dot"></span>
-            Smart Gym Management Platform
-          </div>
+            <section className="hero">
 
-          <h1>
-            Manage Your Gym.
-            <br />
-            <span>Build Stronger.</span>
-          </h1>
+                <div className="hero-content">
 
-          <p className="hero-description">
-            A complete management platform to handle members, trainers,
-            memberships, attendance and payments — all from one place.
-          </p>
+                    <div className="hero-badge">
+                        <span className="badge-dot"></span>
 
-          <div className="hero-buttons">
+                        Smart Gym Management Platform
+                    </div>
 
-            <button className="btn-primary">
-              Get Started
-              <span>→</span>
-            </button>
+                    <h1>
+                        Manage Your Gym.
+                        <br />
+                        <span>Build Stronger.</span>
+                    </h1>
 
-            <button className="btn-secondary">
-              Explore Features
-            </button>
+                    <p className="hero-description">
+                        A complete management platform to handle
+                        members, trainers, memberships, attendance
+                        and payments.
+                    </p>
 
-          </div>
+                    <div className="hero-buttons">
 
-          <div className="hero-trust">
-            <div className="avatar-stack">
-              <span>👤</span>
-              <span>👤</span>
-              <span>👤</span>
-              <span>+</span>
-            </div>
+                        <Button
+                            variant="primary"
+                            onClick={handleGetStarted}
+                        >
+                            Get Started →
+                        </Button>
 
-            <div>
-              <strong>Easy to manage</strong>
-              <small>Everything in one dashboard</small>
-            </div>
-          </div>
+                        <Button variant="secondary">
+                            Explore Features
+                        </Button>
 
-        </div>
+                    </div>
+
+                </div>
+
+            </section>
 
 
-        {/* ================= HERO VISUAL ================= */}
-        <div className="hero-visual">
+            <section className="features">
 
-          <div className="image-glow"></div>
+                <div className="section-heading">
 
-          <div className="hero-image">
-            <img
-              src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=900"
-              alt="Fitness training"
-            />
-          </div>
+                    <span className="section-label">
+                        CORE FEATURES
+                    </span>
 
+                    <h2>
+                        Everything You Need
+                    </h2>
 
-          {/* Floating Attendance Card */}
-          <div className="floating-card attendance-card">
+                    <p>
+                        Powerful tools designed to simplify
+                        everyday gym operations.
+                    </p>
 
-            <div className="floating-icon">
-              ✓
-            </div>
-
-            <div>
-              <small>Today's Attendance</small>
-              <strong>128 Members</strong>
-            </div>
-
-          </div>
+                </div>
 
 
-          {/* Floating Growth Card */}
-          <div className="floating-card growth-card">
+                <div className="feature-grid">
 
-            <small>Monthly Growth</small>
-
-            <strong>+24.8%</strong>
-
-            <span>↑ Improving</span>
-
-          </div>
-
-        </div>
-
-      </section>
+                    <Card
+                        title="Member Management"
+                        description="Manage member profiles, registrations and membership status."
+                    >
+                        <button className="feature-link">
+                            Manage Members →
+                        </button>
+                    </Card>
 
 
-      {/* ================= STATS ================= */}
-      <section className="stats">
-
-        <div className="stat">
-          <strong>1,250+</strong>
-          <span>Active Members</span>
-        </div>
-
-        <div className="stat">
-          <strong>35+</strong>
-          <span>Professional Trainers</span>
-        </div>
-
-        <div className="stat">
-          <strong>98%</strong>
-          <span>Attendance Accuracy</span>
-        </div>
-
-        <div className="stat">
-          <strong>24/7</strong>
-          <span>System Availability</span>
-        </div>
-
-      </section>
+                    <Card
+                        title="Trainer Management"
+                        description="Manage trainers, assignments and training schedules."
+                    >
+                        <button className="feature-link">
+                            View Trainers →
+                        </button>
+                    </Card>
 
 
-      {/* ================= FEATURES ================= */}
-      <section className="features">
+                    <Card
+                        title="Attendance Tracking"
+                        description="Monitor daily attendance and member activity."
+                    >
+                        <button className="feature-link">
+                            Check Attendance →
+                        </button>
+                    </Card>
 
-        <div className="section-heading">
 
-          <span className="section-label">
-            CORE FEATURES
-          </span>
+                    <Card
+                        title="Payments & Memberships"
+                        description="Track payments, renewals and membership plans."
+                    >
+                        <button className="feature-link">
+                            View Payments →
+                        </button>
+                    </Card>
 
-          <h2>
-            Everything You Need
-            <br />
-            <span>To Run Your Gym</span>
-          </h2>
+                </div>
 
-          <p>
-            Powerful tools designed to simplify everyday gym operations
-            and help you focus on your members.
-          </p>
+            </section>
 
         </div>
-
-
-        <div className="feature-grid">
-
-          <div className="feature-card">
-
-            <div className="feature-top">
-              <div className="feature-icon">
-                👥
-              </div>
-
-              <span className="feature-number">
-                01
-              </span>
-            </div>
-
-            <h3>Member Management</h3>
-
-            <p>
-              Manage member profiles, registrations, plans and
-              membership status from one place.
-            </p>
-
-            <button className="feature-link">
-              Manage Members →
-            </button>
-
-          </div>
-
-
-          <div className="feature-card">
-
-            <div className="feature-top">
-              <div className="feature-icon">
-                💪
-              </div>
-
-              <span className="feature-number">
-                02
-              </span>
-            </div>
-
-            <h3>Trainer Management</h3>
-
-            <p>
-              Organize trainers, assign members and manage
-              training schedules efficiently.
-            </p>
-
-            <button className="feature-link">
-              View Trainers →
-            </button>
-
-          </div>
-
-
-          <div className="feature-card">
-
-            <div className="feature-top">
-              <div className="feature-icon">
-                📅
-              </div>
-
-              <span className="feature-number">
-                03
-              </span>
-            </div>
-
-            <h3>Attendance Tracking</h3>
-
-            <p>
-              Monitor daily attendance and get a clear view of
-              member activity and engagement.
-            </p>
-
-            <button className="feature-link">
-              Check Attendance →
-            </button>
-
-          </div>
-
-
-          <div className="feature-card">
-
-            <div className="feature-top">
-              <div className="feature-icon">
-                💳
-              </div>
-
-              <span className="feature-number">
-                04
-              </span>
-            </div>
-
-            <h3>Payments & Memberships</h3>
-
-            <p>
-              Track payments, membership plans, renewals and
-              payment history with ease.
-            </p>
-
-            <button className="feature-link">
-              View Payments →
-            </button>
-
-          </div>
-
-        </div>
-
-      </section>
-
-
-      {/* ================= QUICK ACTIONS ================= */}
-      <section className="quick-section">
-
-        <div className="quick-content">
-
-          <div>
-            <span className="section-label">
-              QUICK ACCESS
-            </span>
-
-            <h2>
-              What would you like
-              <br />
-              to manage today?
-            </h2>
-
-            <p>
-              Quickly access the most frequently used areas
-              of your gym management system.
-            </p>
-          </div>
-
-
-          <div className="quick-actions">
-
-            <button className="quick-action">
-              <span>＋</span>
-              <div>
-                <strong>Add Member</strong>
-                <small>Register a new member</small>
-              </div>
-              <b>→</b>
-            </button>
-
-
-            <button className="quick-action">
-              <span>✓</span>
-              <div>
-                <strong>Mark Attendance</strong>
-                <small>Record today's attendance</small>
-              </div>
-              <b>→</b>
-            </button>
-
-
-            <button className="quick-action">
-              <span>💳</span>
-              <div>
-                <strong>Record Payment</strong>
-                <small>Update payment records</small>
-              </div>
-              <b>→</b>
-            </button>
-
-          </div>
-
-        </div>
-
-      </section>
-
-    </div>
-  );
+    );
 }
 
 export default Home;

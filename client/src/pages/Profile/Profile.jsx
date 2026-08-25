@@ -1,17 +1,35 @@
+import PageTitle from "../../components/ui/PageTitle";
+import Card from "../../components/ui/Card";
+import Button from "../../components/ui/Button";
+
 function Profile() {
+
     return (
-        <div className="page">
+        <div className="profile-page">
 
-            <p className="page-label">
-                User Account
-            </p>
+            <PageTitle
+                title="My Profile"
+                description="Manage your personal information and account settings."
+            />
 
-            <h1>Profile</h1>
+            <Card
+                title="Personal Information"
+                description="Your account information"
+            >
 
-            <p>
-                User profile management will be
-                implemented in a future sprint.
-            </p>
+                <p>
+                    Name: Pema Tshewang Norbu
+                </p>
+
+                <p>
+                    Email: user@example.com
+                </p>
+
+                <Button>
+                    Edit Profile
+                </Button>
+
+            </Card>
 
         </div>
     );

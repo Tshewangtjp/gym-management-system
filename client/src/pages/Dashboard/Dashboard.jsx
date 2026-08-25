@@ -1,35 +1,64 @@
-import Card from "../../components/common/Card";
+import PageTitle from "../../components/ui/PageTitle";
+import Button from "../../components/ui/Button";
+import Card from "../../components/ui/Card";
+
+import "./Dashboard.css";
 
 function Dashboard() {
+
     return (
-        <div className="page">
+        <div className="dashboard-page">
 
-            <p className="page-label">
-                Administrator
-            </p>
+            <PageTitle
+                title="Dashboard"
+                description="Monitor your gym activities and performance."
+                action={
+                    <Button>
+                        + Add Member
+                    </Button>
+                }
+            />
 
-            <h1>Dashboard</h1>
-
-            <p>
-                Overview of gym management activities.
-            </p>
 
             <div className="dashboard-grid">
 
-                <Card title="Total Members">
-                    <p>0</p>
+                <Card
+                    title="Total Members"
+                    description="Currently registered members"
+                >
+                    <div className="dashboard-number">
+                        1,250
+                    </div>
                 </Card>
 
-                <Card title="Active Memberships">
-                    <p>0</p>
+
+                <Card
+                    title="Active Trainers"
+                    description="Currently available trainers"
+                >
+                    <div className="dashboard-number">
+                        35
+                    </div>
                 </Card>
 
-                <Card title="Today's Attendance">
-                    <p>0</p>
+
+                <Card
+                    title="Today's Attendance"
+                    description="Members checked in today"
+                >
+                    <div className="dashboard-number">
+                        128
+                    </div>
                 </Card>
 
-                <Card title="Revenue">
-                    <p>₹0</p>
+
+                <Card
+                    title="Monthly Revenue"
+                    description="Revenue generated this month"
+                >
+                    <div className="dashboard-number">
+                        ₹85,400
+                    </div>
                 </Card>
 
             </div>
@@ -38,4 +67,4 @@ function Dashboard() {
     );
 }
 
-export default Dashboard
+export default Dashboard;
